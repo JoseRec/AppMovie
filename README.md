@@ -1,73 +1,63 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <h1 align="center"> AppMovie</h1>
 
-Currently, two official plugins are available:
+  <p align="center">
+    Aplicación web para buscar películas y series utilizando la API de OMDb.
+    <br />
+    <br />
+    <a href="https://creative-valkyrie-7b1617.netlify.app/">Ver Demo</a>
+  </p>
+</div>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+##  Sobre el Proyecto
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+**AppMovie** es una aplicación web desarrollada con **React + TypeScript** que permite buscar películas y series por nombre, mostrando resultados obtenidos desde la **OMDb API**.
 
-## Expanding the ESLint configuration
+La aplicación muestra información básica como:
+- Título
+- Año de lanzamiento
+- Tipo (película o serie)
+- Poster
+- Identificador IMDb (imdbID)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+El proyecto está enfocado en **buenas prácticas de frontend moderno**, manejo de estado global y consumo seguro de APIs externas.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+##  Demo
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+🔗 **Demo en producción:**  
+👉 https://creative-valkyrie-7b1617.netlify.app/
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+##  Tecnologías Utilizadas
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Este proyecto fue construido usando:
+
+- ⚛️ **React**
+- 🟦 **TypeScript**
+- ⚡ **Vite**
+- 🧠 **Zustand** (manejo de estado global)
+- 🌐 **OMDb API**
+- 📦 **Axios / Fetch API**
+- 🎨 **Tailwind CSS**
+- 🎯 **Heroicons**
+
+---
+
+## 📂 Estructura del Proyecto
+
+```txt
+src/
+│── Components/        # Componentes reutilizables (MovieList, MovieItem, SearchItem, etc.)
+│── store/             # Store global con Zustand
+│── services/          # Lógica de consumo de la API
+│── types/             # Tipos y modelos TypeScript
+│── App.tsx
+│── main.tsx
