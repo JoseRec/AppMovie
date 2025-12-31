@@ -56,8 +56,6 @@ Este proyecto fue construido usando:
 ```txt
 src/
 │── Components/        # Componentes reutilizables (MovieList, MovieItem, SearchItem, etc.)
-│── store/             # Store global con Zustand
-│── services/          # Lógica de consumo de la API
-│── types/             # Tipos y modelos TypeScript
+│── store            # Store global con Zustand
 │── App.tsx
 │── main.tsx
